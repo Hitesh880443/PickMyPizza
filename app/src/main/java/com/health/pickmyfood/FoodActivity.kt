@@ -27,8 +27,8 @@ class FoodActivity : AppCompatActivity() {
         viewModel.myPizza.observe(this, { food ->
             food?.let {
                 viewDataBinding.tvName.text = it.foodName
-                viewDataBinding.tvPrice.text = it.price.toString()
-                viewDataBinding.tvRating.text = it.rating.toString()
+                viewDataBinding.tvPrice.text = "Price ${it.price}"
+                viewDataBinding.tvRating.text = "Rating ${it.rating}"
             }
         })
     }
